@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Bộ đếm thời gian đến 1/1/2023</title>
+
+</head>
+
+<body>
+
+<style>
+
+.wrapper  {
+
+margin: 50px auto;
+
+text-align: center;
+
+border: 1px solid #ff0000;
+
+padding: 25px;
+
+}
+
+.dongho{
+
+color:#ff0000;
+
+font-size:20px;
+
+}
+
+</style>
+
+<h1>Bộ đếm thời gian đến 1/1/2023</h1>
+
+<div class="wrapper">
+
+<span id="countdown" class="dongho"></span>
+
+<script>
+
+var target_date = new Date("01, 01, 2023").getTime();
+
+var days, hours, minutes, seconds;
+
+var countdown = document.getElementById("countdown");
+
+setInterval(function () {
+
+var current_date = new Date().getTime();
+
+var seconds_left = (target_date - current_date) / 1000;
+
+days = parseInt(seconds_left / 86400);
+
+seconds_left = seconds_left % 86400;
+
+hours = parseInt(seconds_left / 3600);
+
+seconds_left = seconds_left % 3600;
+
+minutes = parseInt(seconds_left / 60);
+
+seconds = parseInt(seconds_left % 60);
+
+countdown.innerHTML = "<strong>Còn " + "<br>"+ days + " ngày  " +"<br>"+ hours + " giờ  " +"<br>"+ minutes + " phút  " +"<br>"+ seconds + " giây nữa.</strong>";
+
+}, 1000);
+
+</script>
+
+</div>
+
+<footer>
+
+<p id="infoauthor">By qminh Enterprise Evolution Inc.</p>
+
+<p id="versioninfo" style="display:none;">v1.0_ALPHA</p>
+
+</body>
+
+<script>
+
+var loop1 = setInterval(showhide1,1000);
+
+function showhide1(){
+
+    document.getElementById('infoauthor').style.display = 'none';
+
+}
+
+var loop1 = setInterval(showhide2,1000);
+
+function showhide2(){
+
+    document.getElementById('versioninfo').style.display = 'block';
+
+}
+
+var loop1 = setInterval(showhide3,2000);
+
+function showhide3(){
+
+    document.getElementById('infoauthor').style.display = 'block';
+
+}
+
+var loop1 = setInterval(showhide4,2000);
+
+function showhide4(){
+
+    document.getElementById('versioninfo').style.display = 'none';
+
+}
+
+</script>
+
+</html>
